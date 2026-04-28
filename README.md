@@ -1,189 +1,967 @@
-<!-- ═══════════════════════════════════════════════════════════════ -->
-<!--              THE FINAL PROJECTS — GitHub Profile README        -->
-<!-- ═══════════════════════════════════════════════════════════════ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Final Projects — India's #1 Final Year Project Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --green: #00e87a;
+    --blue: #00b4f0;
+    --gold: #f5c842;
+    --dark: #080c14;
+    --darker: #050810;
+    --card: #0d1420;
+    --card2: #111827;
+    --border: rgba(0,232,122,0.18);
+    --border2: rgba(0,180,240,0.18);
+    --text: #e8f0fe;
+    --muted: #7a8fa6;
+    --white: #ffffff;
+  }
 
-<div align="center">
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<!-- ANIMATED HEADER BANNER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00ff88,100:00aaff&height=200&section=header&text=THE%20FINAL%20PROJECTS&fontSize=42&fontAlignY=38&fontFamily=Courier&fontColor=ffffff&animation=twinkling&desc=200%2B%20Final%20Year%20Projects%20Ready%20to%20Deploy&descAlignY=58&descSize=16&descColor=c8d6e5" />
+  body {
+    background: var(--darker);
+    color: var(--text);
+    font-family: 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
 
-<!-- TYPING ANIMATION -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Share+Tech+Mono&size=18&duration=3000&pause=800&color=00FF88&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=80&lines=🚀+200%2B+Final+Year+Projects+Available;🤖+AI+%7C+ML+%7C+Web+%7C+Mobile+%7C+IoT+%7C+Blockchain;📦+Full+Source+Code+%2B+Documentation+%2B+Demo;⚡+Delivery+Within+24+Hours)](https://git.io/typing-svg)
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px 60px;
+    overflow: hidden;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,232,122,0.08) 0%, transparent 70%),
+                radial-gradient(ellipse 60% 40% at 80% 80%, rgba(0,180,240,0.07) 0%, transparent 60%),
+                var(--darker);
+  }
+  .hero::before {
+    content:'';
+    position:absolute;
+    inset:0;
+    background-image:
+      linear-gradient(rgba(0,232,122,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,232,122,0.035) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events:none;
+  }
 
-<!-- TOP BADGES -->
-![Projects](https://img.shields.io/badge/📁_Projects-200%2B-00ff88?style=for-the-badge&labelColor=0d0d14)
-![AI/ML](https://img.shields.io/badge/🤖_AI%2FML-50%2B-a855f7?style=for-the-badge&labelColor=0d0d14)
-![Delivery](https://img.shields.io/badge/⚡_Delivery-24_Hours-ffaa00?style=for-the-badge&labelColor=0d0d14)
-![Support](https://img.shields.io/badge/💬_Support-24%2F7-00aaff?style=for-the-badge&labelColor=0d0d14)
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 36px;
+  }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .badge-green { background: rgba(0,232,122,0.1); border: 1px solid rgba(0,232,122,0.3); color: var(--green); }
+  .badge-blue  { background: rgba(0,180,240,0.1);  border: 1px solid rgba(0,180,240,0.3);  color: var(--blue); }
+  .badge-gold  { background: rgba(245,200,66,0.1);  border: 1px solid rgba(245,200,66,0.3);  color: var(--gold); }
 
+  .hero-eyebrow {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 16px;
+  }
+
+  .hero-title {
+    font-family: 'Raleway', 'Gill Sans MT', sans-serif;
+    font-size: clamp(42px, 7vw, 88px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, #ffffff 30%, #a8e6c8 65%, #7dd4f8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+  }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    display: block;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--green), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .stat-label {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--green), #00c97a);
+    color: #050810;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 32px rgba(0,232,122,0.25);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 40px rgba(0,232,122,0.4); }
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--white);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--blue); background: rgba(0,180,240,0.06); }
+
+  /* ── MARQUEE ── */
+  .marquee-wrap {
+    background: rgba(0,232,122,0.05);
+    border-top: 1px solid rgba(0,232,122,0.12);
+    border-bottom: 1px solid rgba(0,232,122,0.12);
+    padding: 14px 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .marquee-inner {
+    display: inline-flex;
+    gap: 48px;
+    animation: marquee 30s linear infinite;
+  }
+  .marquee-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green);
+    opacity: 0.8;
+  }
+  .marquee-dot { width: 4px; height: 4px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* ── SECTIONS ── */
+  section { padding: 100px 24px; max-width: 1100px; margin: 0 auto; }
+  .section-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: 'Raleway', 'Gill Sans MT', sans-serif;
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+  .section-sub {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 60px;
+    max-width: 560px;
+  }
+
+  /* ── CATEGORY GRID ── */
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  .cat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s, border-color 0.25s;
+    cursor: default;
+  }
+  .cat-card::after {
+    content:'';
+    position:absolute;
+    inset:0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(0,232,122,0.06), transparent 70%);
+    pointer-events:none;
+  }
+  .cat-card:hover { transform: translateY(-4px); border-color: rgba(0,232,122,0.35); }
+  .cat-icon { font-size: 32px; margin-bottom: 14px; }
+  .cat-count {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--green);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .cat-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+  .cat-tech {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  /* ── FEATURED TABLE ── */
+  .projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .projects-table thead tr {
+    background: rgba(0,232,122,0.08);
+    border-bottom: 1px solid rgba(0,232,122,0.2);
+  }
+  .projects-table th {
+    padding: 14px 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--green);
+    text-align: left;
+  }
+  .projects-table tbody tr {
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    transition: background 0.18s;
+  }
+  .projects-table tbody tr:hover { background: rgba(255,255,255,0.025); }
+  .projects-table td {
+    padding: 16px 20px;
+    font-size: 14px;
+    color: var(--text);
+    vertical-align: middle;
+  }
+  .proj-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgba(0,232,122,0.4);
+    width: 48px;
+  }
+  .proj-name { font-weight: 600; color: var(--white); }
+  .proj-tech { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .proj-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .tag-ai    { background: rgba(168,85,247,0.15); color: #c084fc; }
+  .tag-web   { background: rgba(0,180,240,0.12);  color: var(--blue); }
+  .tag-iot   { background: rgba(245,200,66,0.12);  color: var(--gold); }
+  .tag-chain { background: rgba(99,210,173,0.12); color: #5eead4; }
+  .tag-ml    { background: rgba(251,146,60,0.12); color: #fb923c; }
+  .tag-mob   { background: rgba(244,114,182,0.12); color: #f472b6; }
+
+  /* ── INCLUDES ── */
+  .includes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .include-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 22px 22px;
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px;
+    transition: border-color 0.2s;
+  }
+  .include-item:hover { border-color: rgba(0,232,122,0.25); }
+  .include-tick {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(0,232,122,0.1);
+    border: 1px solid rgba(0,232,122,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+  .include-title { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 3px; }
+  .include-desc  { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+  /* ── STEPS ── */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0;
+    position: relative;
+  }
+  .step {
+    padding: 32px 28px;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 0;
+    background: var(--card2);
+    position: relative;
+  }
+  .step:first-child { border-radius: 16px 0 0 16px; }
+  .step:last-child  { border-radius: 0 16px 16px 0; }
+  .step-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 64px;
+    font-weight: 300;
+    line-height: 1;
+    color: rgba(0,232,122,0.12);
+    margin-bottom: 8px;
+  }
+  .step-title { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+  .step-desc  { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .step-arrow {
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 28px;
+    height: 28px;
+    background: var(--dark);
+    border: 1px solid rgba(0,232,122,0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: var(--green);
+  }
+
+  /* ── TECH ── */
+  .tech-group { margin-bottom: 36px; }
+  .tech-group-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+  .tech-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tech-pill {
+    padding: 6px 14px;
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    transition: border-color 0.18s, color 0.18s;
+  }
+  .tech-pill:hover { border-color: rgba(0,232,122,0.35); color: var(--green); }
+
+  /* ── CONTACT ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .contact-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 36px 24px;
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 16px;
+    text-decoration: none;
+    transition: transform 0.22s, border-color 0.22s;
+    text-align: center;
+  }
+  .contact-card:hover { transform: translateY(-4px); }
+  .contact-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  .contact-name { font-size: 15px; font-weight: 700; color: var(--white); }
+  .contact-handle { font-size: 12px; color: var(--muted); }
+
+  .wa { background: rgba(37,211,102,0.15); border: 1px solid rgba(37,211,102,0.25); }
+  .yt { background: rgba(255,0,0,0.12); border: 1px solid rgba(255,0,0,0.2); }
+  .gd { background: rgba(0,180,240,0.12); border: 1px solid rgba(0,180,240,0.2); }
+  .tg { background: rgba(0,136,204,0.12); border: 1px solid rgba(0,136,204,0.2); }
+
+  /* ── TESTIMONIAL ── */
+  .testimonials { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .testimonial {
+    padding: 28px;
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+  }
+  .stars { color: var(--gold); font-size: 13px; letter-spacing: 2px; margin-bottom: 14px; }
+  .testimonial-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.6;
+    margin-bottom: 18px;
+  }
+  .testimonial-author { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 60px 24px;
+    background: var(--darker);
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  footer .f-logo {
+    font-family: 'Raleway', 'Gill Sans MT', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    background: linear-gradient(135deg, var(--green), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+  }
+  footer .f-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  footer .f-copy { font-size: 12px; color: rgba(255,255,255,0.2); letter-spacing: 0.05em; }
+
+  /* Divider */
+  .divider { width: 60px; height: 2px; background: linear-gradient(90deg, var(--green), var(--blue)); border-radius: 2px; margin-bottom: 20px; }
+
+  /* Full width container */
+  .full { max-width: 100%; padding: 0; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HERO ═══════════ -->
+<div class="hero">
+  <div class="badge-row">
+    <span class="badge badge-green">🇮🇳 India's #1</span>
+    <span class="badge badge-blue">200+ Projects</span>
+    <span class="badge badge-gold">⚡ 24hr Delivery</span>
+  </div>
+
+  <p class="hero-eyebrow">Est. 2023 · Engineering Project Store</p>
+
+  <h1 class="hero-title">The Final<br/>Projects</h1>
+
+  <p class="hero-subtitle">Complete, working, submission-ready final year projects for engineering students across India</p>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <span class="stat-num">200+</span>
+      <span class="stat-label">Projects Ready</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">5</span>
+      <span class="stat-label">Tech Domains</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">24hr</span>
+      <span class="stat-label">Delivery</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Working Code</span>
+    </div>
+  </div>
+
+  <div class="hero-cta">
+    <a href="https://chat.whatsapp.com/BT41x2osFLeAMZFx5QU9qM?mode=gi_t" class="btn-primary" target="_blank">
+      💬 Get Your Project Now
+    </a>
+    <a href="https://www.youtube.com/@TheFinalProjetcs" class="btn-secondary" target="_blank">
+      ▶ Watch Demos
+    </a>
+  </div>
 </div>
 
----
-
-## 🖥️ About The Final Projects
-
-```bash
-$ whoami
-> The Final Projects — India's #1 Final Year Project Store
-
-$ cat info.json
-{
-  "brand"       : "The Final Projects",
-  "projects"    : "200+ and growing",
-  "categories"  : ["AI/ML", "Web Apps", "Mobile", "IoT", "Blockchain"],
-  "languages"   : ["Python", "Java", "JavaScript", "Kotlin", "PHP"],
-  "delivery"    : "Within 24 hours",
-  "docs"        : "Full project report + synopsis included",
-  "support"     : "Installation help + viva Q&A prep"
-}
-```
-
-> 🎓 We help engineering students across India get **complete, working, submission-ready** final year projects with source code, documentation, database, PPT, and demo video — all in one package.
-
----
-
-## 📊 Project Stats
-
-<div align="center">
-
-| 🗂️ Category | 📦 Count | 💻 Tech Stack |
-|:---:|:---:|:---|
-| 🌐 Web Applications | 80+ | React, Node.js, PHP, Django, Spring Boot |
-| 🤖 AI / Machine Learning | 50+ | Python, TensorFlow, Keras, OpenCV, Scikit-learn |
-| 📱 Mobile Apps | 30+ | Android, Flutter, Kotlin, React Native |
-| 🔌 IoT Projects | 20+ | Arduino, Raspberry Pi, ESP32, Python |
-| ⛓️ Blockchain | 20+ | Solidity, Web3.js, Ethereum, Smart Contracts |
-
+<!-- ═══════════ MARQUEE ═══════════ -->
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <span class="marquee-item"><span class="marquee-dot"></span>AI / Machine Learning</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Web Applications</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Mobile Apps</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>IoT Systems</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Blockchain</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Full Source Code</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Project Report</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>PPT Included</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Viva Q&A Guide</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>WhatsApp Support</span>
+    <!-- repeat for seamless loop -->
+    <span class="marquee-item"><span class="marquee-dot"></span>AI / Machine Learning</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Web Applications</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Mobile Apps</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>IoT Systems</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Blockchain</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Full Source Code</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Project Report</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>PPT Included</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>Viva Q&A Guide</span>
+    <span class="marquee-item"><span class="marquee-dot"></span>WhatsApp Support</span>
+  </div>
 </div>
 
----
+<!-- ═══════════ CATEGORIES ═══════════ -->
+<section>
+  <p class="section-eyebrow">What We Offer</p>
+  <h2 class="section-title">Browse by Domain</h2>
+  <p class="section-sub">From AI to IoT — every major engineering discipline, all submission-ready</p>
 
-## 🚀 Featured Projects
+  <div class="cat-grid">
+    <div class="cat-card">
+      <div class="cat-icon">🤖</div>
+      <div class="cat-count">50+</div>
+      <div class="cat-name">AI / Machine Learning</div>
+      <div class="cat-tech">Python · TensorFlow · Keras · OpenCV · Scikit-learn</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">🌐</div>
+      <div class="cat-count">80+</div>
+      <div class="cat-name">Web Applications</div>
+      <div class="cat-tech">React · Node.js · Django · Spring Boot · PHP</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">📱</div>
+      <div class="cat-count">30+</div>
+      <div class="cat-name">Mobile Apps</div>
+      <div class="cat-tech">Flutter · Android · Kotlin · React Native</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">🔌</div>
+      <div class="cat-count">20+</div>
+      <div class="cat-name">IoT Projects</div>
+      <div class="cat-tech">Arduino · Raspberry Pi · ESP32 · Python</div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-icon">⛓️</div>
+      <div class="cat-count">20+</div>
+      <div class="cat-name">Blockchain</div>
+      <div class="cat-tech">Solidity · Web3.js · Ethereum · Smart Contracts</div>
+    </div>
+  </div>
+</section>
 
-<div align="center">
+<!-- ═══════════ FEATURED PROJECTS ═══════════ -->
+<section style="background: rgba(255,255,255,0.015); border-radius:24px; margin: 0 24px; padding: 80px 48px;">
+  <p class="section-eyebrow">Featured</p>
+  <h2 class="section-title">Popular Projects</h2>
+  <p class="section-sub">Hand-picked top sellers — all come with source code, report & demo video</p>
 
-| # | Project Name | Tech | Category |
-|---|---|---|---|
-| 01 | 🎯 Face Recognition Attendance System | Python, OpenCV, CNN | AI / ML |
-| 02 | 🏥 Disease Prediction System | Python, Flask, Sklearn | Machine Learning |
-| 03 | 🛒 E-Commerce Full Stack Platform | MERN Stack | Web App |
-| 04 | 🏫 Smart College Portal | Java, Spring Boot, MySQL | Full Stack |
-| 05 | 💬 AI Chatbot with NLP | Python, NLTK, TensorFlow | AI / NLP |
-| 06 | 🚗 Vehicle Number Plate Detection | Python, OpenCV, EasyOCR | Computer Vision |
-| 07 | 🏦 Online Banking System | Java, JSP, MySQL | Web App |
-| 08 | 📦 Supply Chain on Blockchain | Solidity, Web3, React | Blockchain |
-| 09 | 🏠 Smart Home IoT System | Arduino, Raspberry Pi, Python | IoT |
-| 10 | 📱 Food Delivery Mobile App | Flutter, Firebase | Mobile |
+  <table class="projects-table">
+    <thead>
+      <tr>
+        <th style="width:48px">#</th>
+        <th>Project</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="proj-num">01</td>
+        <td>
+          <div class="proj-name">Face Recognition Attendance System</div>
+          <div class="proj-tech">Python · OpenCV · CNN · Flask</div>
+        </td>
+        <td><span class="proj-tag tag-ai">AI / CV</span></td>
+      </tr>
+      <tr>
+        <td class="proj-num">02</td>
+        <td>
+          <div class="proj-name">Disease Prediction System</div>
+          <div class="proj-tech">Python · Scikit-learn · Flask · MySQL</div>
+        </td>
+        <td><span class="proj-tag tag-ml">ML</span></td>
+      </tr>
+      <tr>
+        <td class="proj-num">03</td>
+        <td>
+          <div class="proj-name">E-Commerce Full Stack Platform</div>
+          <div class="proj-tech">MERN Stack · MongoDB · Stripe API</div>
+        </td>
+        <td><span class="proj-tag tag-web">Web App</span></td>
+      </tr>
+      <tr>
+        <td class="proj-num">04</td>
+        <td>
+          <div class="proj-name">Smart College Portal</div>
+          <div class="proj-tech">Java · Spring Boot · MySQL · React</div>
+        </td>
+        <td><span class="proj-tag tag-web">Full Stack</span></td>
+      </tr>
+      <tr>
+        <td class="proj-num">05</td>
+        <td>
+          <div class="proj-name">AI Chatbot with NLP</div>
+          <div class="proj-tech">Python · NLTK · TensorFlow · Flask</div>
+        </td>
+        <td><span class="proj-tag tag-ai">AI / NLP</span></td>
+      </tr>
+      <tr>
+        <td class="proj-num">06</td>
+        <td>
+          <div class="proj-name">Vehicle Number Plate Detection</div>
+          <div class="proj-tech">Python · OpenCV · EasyOCR</div>
+        </td>
+        <td><span class="proj-tag tag-ai">Computer Vision</span></td>
+      </tr>
+      <tr>
+        <td class="proj-num">07</td>
+        <td>
+          <div class="proj-name">Supply Chain on Blockchain</div>
+          <div class="proj-tech">Solidity · Web3.js · React · Truffle</div>
+        </td>
+        <td><span class="proj-tag tag-chain">Blockchain</span></td>
+      </tr>
+      <tr>
+        <td class="proj-num">08</td>
+        <td>
+          <div class="proj-name">Smart Home IoT System</div>
+          <div class="proj-tech">Arduino · Raspberry Pi · Python · MQTT</div>
+        </td>
+        <td><span class="proj-tag tag-iot">IoT</span></td>
+      </tr>
+      <tr>
+        <td class="proj-num">09</td>
+        <td>
+          <div class="proj-name">Food Delivery Mobile App</div>
+          <div class="proj-tech">Flutter · Firebase · Google Maps API</div>
+        </td>
+        <td><span class="proj-tag tag-mob">Mobile</span></td>
+      </tr>
+      <tr>
+        <td class="proj-num">10</td>
+        <td>
+          <div class="proj-name">Online Banking System</div>
+          <div class="proj-tech">Java · JSP · MySQL · Bootstrap</div>
+        </td>
+        <td><span class="proj-tag tag-web">Web App</span></td>
+      </tr>
+    </tbody>
+  </table>
 
-</div>
+  <p style="margin-top:28px; font-size:14px; color:var(--muted); text-align:center;">
+    💡 Don't see your topic? We have 200+ projects. <a href="https://chat.whatsapp.com/BT41x2osFLeAMZFx5QU9qM?mode=gi_t" style="color:var(--green); text-decoration:none; font-weight:600;">DM us on WhatsApp →</a>
+  </p>
+</section>
 
-> 💡 **Don't see your topic?** We have 200+ projects. Just DM us and we'll find the perfect match for you!
+<!-- ═══════════ WHAT'S INCLUDED ═══════════ -->
+<section>
+  <p class="section-eyebrow">Every Package</p>
+  <h2 class="section-title">What You Get</h2>
+  <p class="section-sub">Everything you need from code to viva — zero hassle</p>
 
----
+  <div class="includes-grid">
+    <div class="include-item">
+      <div class="include-tick">💻</div>
+      <div>
+        <div class="include-title">Complete Source Code</div>
+        <div class="include-desc">Clean, commented, and ready to run — no broken dependencies</div>
+      </div>
+    </div>
+    <div class="include-item">
+      <div class="include-tick">📄</div>
+      <div>
+        <div class="include-title">Project Report</div>
+        <div class="include-desc">Full documentation, 20–80 pages, IEEE-format ready</div>
+      </div>
+    </div>
+    <div class="include-item">
+      <div class="include-tick">📝</div>
+      <div>
+        <div class="include-title">Synopsis / Abstract</div>
+        <div class="include-desc">Ready-to-submit synopsis in standard engineering format</div>
+      </div>
+    </div>
+    <div class="include-item">
+      <div class="include-tick">🗄️</div>
+      <div>
+        <div class="include-title">Database / Schema</div>
+        <div class="include-desc">SQL dump or DB file included and configured</div>
+      </div>
+    </div>
+    <div class="include-item">
+      <div class="include-tick">🖥️</div>
+      <div>
+        <div class="include-title">PPT Presentation</div>
+        <div class="include-desc">Professional slides designed for your viva defence</div>
+      </div>
+    </div>
+    <div class="include-item">
+      <div class="include-tick">🎬</div>
+      <div>
+        <div class="include-title">Demo Video</div>
+        <div class="include-desc">Full working walkthrough video of the project in action</div>
+      </div>
+    </div>
+    <div class="include-item">
+      <div class="include-tick">📋</div>
+      <div>
+        <div class="include-title">Installation Guide</div>
+        <div class="include-desc">Step-by-step setup for Windows, Linux & Mac</div>
+      </div>
+    </div>
+    <div class="include-item">
+      <div class="include-tick">🎓</div>
+      <div>
+        <div class="include-title">Viva Q&A Guide</div>
+        <div class="include-desc">Most-asked examiner questions with model answers</div>
+      </div>
+    </div>
+    <div class="include-item">
+      <div class="include-tick">💬</div>
+      <div>
+        <div class="include-title">WhatsApp Support</div>
+        <div class="include-desc">Personal support until your project is submitted & approved</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-## 📦 What's Included in Every Project
+<!-- ═══════════ HOW TO BUY ═══════════ -->
+<section style="max-width:900px;">
+  <p class="section-eyebrow">Simple Process</p>
+  <h2 class="section-title">How to Buy</h2>
+  <p class="section-sub">Four steps from browsing to receiving your complete project</p>
 
-```
-✅  Complete Source Code        — Clean, commented, ready to run
-✅  Project Report              — Full documentation (20-80 pages)
-✅  Synopsis / Abstract         — IEEE format ready
-✅  Database / Schema           — SQL dump or DB file included
-✅  PPT Presentation            — Professional slides for viva
-✅  Demo Video                  — Working video walkthrough
-✅  Installation Guide          — Step-by-step setup instructions
-✅  Viva Q&A Guide              — Common questions + answers
-✅  WhatsApp Support            — Until your project is submitted
-```
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-title">Browse & Choose</div>
+      <div class="step-desc">Browse 200+ projects or tell us your topic and we'll match you perfectly</div>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-title">Contact Us</div>
+      <div class="step-desc">DM us on WhatsApp, Instagram, or email with your project requirement</div>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-title">Make Payment</div>
+      <div class="step-desc">Pay via UPI, PhonePe, or Bank Transfer — secure and instant</div>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-title">Receive in 24hr</div>
+      <div class="step-desc">Get your full project package delivered within 24 hours — ready to submit ✅</div>
+    </div>
+  </div>
+</section>
 
----
+<!-- ═══════════ TECH STACK ═══════════ -->
+<section style="background: rgba(255,255,255,0.015); border-radius:24px; margin: 0 24px; padding: 80px 48px;">
+  <p class="section-eyebrow">Technologies</p>
+  <h2 class="section-title">Tech Stack We Cover</h2>
+  <p class="section-sub">Every major language, framework and database used in engineering curricula</p>
 
-## 🛠️ Tech Stack We Cover
+  <div class="tech-group">
+    <div class="tech-group-label">Languages</div>
+    <div class="tech-pills">
+      <span class="tech-pill">Python</span>
+      <span class="tech-pill">Java</span>
+      <span class="tech-pill">JavaScript</span>
+      <span class="tech-pill">PHP</span>
+      <span class="tech-pill">Kotlin</span>
+      <span class="tech-pill">Dart</span>
+      <span class="tech-pill">Solidity</span>
+      <span class="tech-pill">C / C++</span>
+    </div>
+  </div>
 
-<div align="center">
+  <div class="tech-group">
+    <div class="tech-group-label">Frameworks & Libraries</div>
+    <div class="tech-pills">
+      <span class="tech-pill">React</span>
+      <span class="tech-pill">Node.js</span>
+      <span class="tech-pill">Django</span>
+      <span class="tech-pill">Flask</span>
+      <span class="tech-pill">Spring Boot</span>
+      <span class="tech-pill">Flutter</span>
+      <span class="tech-pill">TensorFlow</span>
+      <span class="tech-pill">OpenCV</span>
+      <span class="tech-pill">Keras</span>
+      <span class="tech-pill">Scikit-learn</span>
+      <span class="tech-pill">Web3.js</span>
+    </div>
+  </div>
 
-**Languages**
+  <div class="tech-group" style="margin-bottom:0">
+    <div class="tech-group-label">Databases & Platforms</div>
+    <div class="tech-pills">
+      <span class="tech-pill">MySQL</span>
+      <span class="tech-pill">MongoDB</span>
+      <span class="tech-pill">Firebase</span>
+      <span class="tech-pill">PostgreSQL</span>
+      <span class="tech-pill">Arduino</span>
+      <span class="tech-pill">Raspberry Pi</span>
+      <span class="tech-pill">ESP32</span>
+      <span class="tech-pill">Ethereum</span>
+    </div>
+  </div>
+</section>
 
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white)
-![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=kotlin&logoColor=white)
-![Dart](https://img.shields.io/badge/Dart-0175C2?style=flat-square&logo=dart&logoColor=white)
+<!-- ═══════════ TESTIMONIALS ═══════════ -->
+<section>
+  <p class="section-eyebrow">Student Reviews</p>
+  <h2 class="section-title">What Students Say</h2>
+  <p class="section-sub">Real feedback from engineering students who submitted with us</p>
 
-**Frameworks & Libraries**
+  <div class="testimonials">
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">"Got my AI attendance system project within 12 hours. The viva Q&A guide was incredibly helpful — my examiner was impressed."</div>
+      <div class="testimonial-author">Arjun S. · VIT Chennai · CSE Final Year</div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">"The MERN stack e-commerce project was complete with everything. Source code, report, PPT and even a demo video. Highly recommend!"</div>
+      <div class="testimonial-author">Priya R. · Anna University · IT Department</div>
+    </div>
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      <div class="testimonial-text">"WhatsApp support was super fast. They helped me set up the project on my laptop step by step. Submitted with zero issues."</div>
+      <div class="testimonial-author">Karthik M. · SRM Institute · ECE Branch</div>
+    </div>
+  </div>
+</section>
 
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=flat-square&logo=node.js&logoColor=white)
-![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white)
-![Spring](https://img.shields.io/badge/Spring-6DB33F?style=flat-square&logo=spring&logoColor=white)
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=flat-square&logo=OpenCV&logoColor=white)
+<!-- ═══════════ CONTACT ═══════════ -->
+<section style="max-width:800px; text-align:center;">
+  <p class="section-eyebrow">Get in Touch</p>
+  <h2 class="section-title">Contact Us Now</h2>
+  <p class="section-sub" style="margin:0 auto 40px;">We respond within minutes on WhatsApp — pick your preferred channel</p>
 
-**Databases**
+  <div class="contact-grid">
+    <a href="https://chat.whatsapp.com/BT41x2osFLeAMZFx5QU9qM?mode=gi_t" class="contact-card" target="_blank">
+      <div class="contact-icon wa">💬</div>
+      <div class="contact-name">WhatsApp</div>
+      <div class="contact-handle">Join our group</div>
+    </a>
+    <a href="https://www.youtube.com/@TheFinalProjetcs" class="contact-card" target="_blank">
+      <div class="contact-icon yt">▶</div>
+      <div class="contact-name">YouTube</div>
+      <div class="contact-handle">@TheFinalProjetcs</div>
+    </a>
+    <a href="https://drive.google.com/file/d/1FLHEiPEBpyR7ZWxoamL0yl_yd7MFfwL5/view" class="contact-card" target="_blank">
+      <div class="contact-icon gd">📁</div>
+      <div class="contact-name">Project List</div>
+      <div class="contact-handle">Browse all titles</div>
+    </a>
+    <a href="https://t.me/thefinalprojects" class="contact-card" target="_blank">
+      <div class="contact-icon tg">✈</div>
+      <div class="contact-name">Telegram</div>
+      <div class="contact-handle">@thefinalprojects</div>
+    </a>
+  </div>
+</section>
 
-![MySQL](https://img.shields.io/badge/MySQL-00000F?style=flat-square&logo=mysql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=flat-square&logo=mongodb&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=flat-square&logo=Firebase&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="f-logo">The Final Projects</div>
+  <div class="f-tagline">Built with care for engineering students across India</div>
+  <div class="f-copy">© 2025 The Final Projects · 200+ Projects · 24hr Delivery · WhatsApp Support</div>
+</footer>
 
-</div>
-
----
-
-## 💰 How to Buy
-
-<div align="center">
-
-```
-STEP 1  →  Browse our project list or tell us your topic
-STEP 2  →  DM us on WhatsApp / Instagram / Email
-STEP 3  →  Make payment (UPI / Bank Transfer / PhonePe)
-STEP 4  →  Receive your full project package within 24 hours ✅
-```
-
-### 📞 Contact Us Now
-
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/91XXXXXXXXXX)
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/thefinalprojects)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your@email.com)
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/thefinalprojects)
-
-</div>
-
----
-
-## 📈 GitHub Stats
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=chartreuse-dark&bg_color=0d0d14&border_color=00ff88&title_color=00ff88&text_color=c8d6e5&icon_color=00aaff)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=chartreuse-dark&bg_color=0d0d14&border_color=00ff88&title_color=00ff88&text_color=c8d6e5)
-
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=chartreuse-dark&background=0d0d14&border=00ff88&ring=00ff88&fire=ffaa00&currStreakLabel=00aaff)
-
-</div>
-
----
-
-## 🐍 Contribution Graph
-
-<div align="center">
-
-![Snake animation](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/output/github-contribution-grid-snake-dark.svg)
-
-</div>
-
----
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00aaff,100:00ff88&height=120&section=footer&text=THE%20FINAL%20PROJECTS&fontSize=24&fontColor=ffffff&fontFamily=Courier&animation=twinkling" />
-
-**© 2025 The Final Projects · Built with ❤️ for Engineering Students across India**
-
-![Profile Views](https://komarev.com/ghpvc/?username=YOUR_USERNAME&color=00ff88&style=flat-square&label=Profile+Views)
-
-</div>
+</body>
+</html>
